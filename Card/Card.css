@@ -1,11 +1,38 @@
-div.fContainer {
-    height: 100vh;
-    width: 100%;
+.Container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-div.bContainer {
+.fContainer {
+    height: 47vh;
+    width: 500px;
+}
+
+.bContainer {
     background-color: black;
-    width: 600px;
-    height: 300px;
+    width: 500px;
+    height: 283px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    border-radius: 15px;
+
     color: white;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+/*명함 첫장 이미지*/
+.img1 {
+    max-width: 100%;  
+    height: auto; 
+    border-radius: 15px;
+}
+
+/*명함 로고 이미지*/
+.img2 {
+    width: 200px;
+    height: 162px;
 }
