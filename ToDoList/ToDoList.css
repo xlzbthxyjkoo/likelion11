@@ -1,0 +1,18 @@
+/*화면에 꽉 채우기 위해*/
+html {
+    height: 100%;
+}
+
+body {
+    background-color: antiquewhite;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    min-height: 100%; /*왜 해주는거지...*/
+}
+
+.todo-wrapper {
+    justify-content: center;
+    margin: 3rem;
+    min-width: 600px; /*이건 또 멍미~*/
+}
