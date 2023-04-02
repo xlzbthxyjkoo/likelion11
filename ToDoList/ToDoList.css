@@ -16,3 +16,27 @@ body {
     margin: 3rem;
     min-width: 600px; /*이건 또 멍미~*/
 }
+
+.todo-title {
+    text-align: center;
+    padding: 3rem;
+    font-size: 3rem;
+}
+
+.todo-box {
+    background-color: whitesmoke;
+}
+
+.todo-input-box {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    height: 3rem;
+}
+
+button {
+    background-color: transparent; /*버튼 배경 투명으로 바꾸고*/
+    border: 0; /*경계 0으로*/
+}
