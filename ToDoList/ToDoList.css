@@ -1,7 +1,7 @@
 /*화면에 꽉 채우기 위해*/
 html {
     height: 100%;
-}
+} 
 
 body {
     background-color: antiquewhite;
@@ -21,22 +21,85 @@ body {
     text-align: center;
     padding: 3rem;
     font-size: 3rem;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .todo-box {
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 .todo-input-box {
     display: flex;
     flex-wrap: nowrap;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    font-family: 'Sunflower', 'Ubuntu', sans-serif;
 
     height: 3rem;
+    border-bottom: 1px solid #ddd;
 }
 
 button {
     background-color: transparent; /*버튼 배경 투명으로 바꾸고*/
     border: 0; /*경계 0으로*/
+}
+
+.todo-input {
+    width: 80%;
+    text-align: center;
+    border: 0;
+    outline: none;
+}
+
+.todo-list {
+    padding-left: 0px;
+    margin: 0px;
+}
+
+.todo-item {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    height: 3rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.all-button {
+    margin: 1rem;
+}
+
+.checkbox {
+    width: 1rem;
+    height: 1rem;
+    margin: 1rem 1rem;
+
+    border-radius: 50px;
+    border: 1px solid lightgray;
+
+    min-width: none;
+    min-height: none;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.todo {
+    font-family: 'Sunflower', 'Ubuntu', sans-serif;
+    text-align: center;
+    margin: 1rem;
+}
+
+.deleteBTN:hover {
+    opacity: 0.3; /*투명도*/
+}
+
+.deleteBTN {
+    cursor: pointer;
+    width: 2rem;
 }
