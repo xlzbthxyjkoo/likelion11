@@ -107,6 +107,8 @@ button {
 }
 
 .todo-footer {
+    font-family: 'Sunflower', 'Ubuntu', sans-serif;
+
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -115,6 +117,17 @@ button {
 
     height: 3rem;
     padding: 0rem 0.5rem;
+}
+
+.left-items{
+    padding: 0rem 0.5rem;
+}
+
+
+.button-group {
+    flex-direction: row;
+    flex-wrap: nowrap;
+
 }
 
 .button-group button{
@@ -127,7 +140,17 @@ button {
     cursor: pointer;
 }
 
+.button-group button.selected{
+    border: 1.5px solid #6495ED;
+}
+
+.clear-completed:hover{
+    cursor: pointer;
+    text-decoration: underline; /*마우스 올려놨을 때 underline*/
+}
+
 p.information {
+    font-family: 'Sunflower', 'Ubuntu', sans-serif;
     margin-top: 1rem;
     text-align: center;
     color: #ccc;
