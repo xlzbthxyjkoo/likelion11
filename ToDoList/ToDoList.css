@@ -89,6 +89,11 @@ button {
     cursor: pointer;
 }
 
+.todo-item.checked .checkbox{
+    border: 2px solid darkgray;
+    color: green;
+}
+
 .todo {
     font-family: 'Sunflower', 'Ubuntu', sans-serif;
     text-align: center;
