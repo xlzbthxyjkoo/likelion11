@@ -1,4 +1,4 @@
-const InputElement = doucument.querySelector('.todo-input'); //querySelector로 원하는 요소 찾기
+const InputElement = document.querySelector('.todo-input'); //querySelector로 원하는 요소 찾기
 const ToDoListElement = document.querySelector('.todo-list');
 
 let todolist = []; //할 일을 담는 배열
@@ -37,6 +37,7 @@ const paintToDoList = () => {
 
         const checkboxElement = document.createElement('div');
         checkboxElement.classList.add('checkbox');
+        checkboxElement.innerText = '⬜';
 
         const todoElement = document.createElement('div');
         todoElement.classList.add('todo');
@@ -72,5 +73,5 @@ const init = () => {
 }
 
 
-init();
+init()
 

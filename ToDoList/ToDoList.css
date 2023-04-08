@@ -45,6 +45,22 @@ button {
     border: 0; /*경계 0으로*/
 }
 
+.complete-all-button {
+    color: gray;
+    min-width: none;
+    min-height: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.5rem 0.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.complete-all-button.checked {
+    color:green;
+}
+
 .todo-input {
     width: 80%;
     text-align: center;
@@ -70,6 +86,11 @@ button {
     border-bottom: 1px solid #ddd;
 }
 
+.todo-item.checked .checkbox{
+    border: 2px solid darkgray;
+    color: green;
+}
+
 .all-button {
     margin: 1rem;
 }
@@ -89,15 +110,16 @@ button {
     cursor: pointer;
 }
 
-.todo-item.checked .checkbox{
-    border: 2px solid darkgray;
-    color: green;
-}
-
 .todo {
     font-family: 'Sunflower', 'Ubuntu', sans-serif;
     text-align: center;
     margin: 1rem;
+}
+
+.todo-item.checked .todo{
+    font-style: italic;
+    text-decoration: line-through;
+    color: lightgray;
 }
 
 /*del 버튼 위에 마우스 올렸을 때 투명도*/
@@ -128,7 +150,6 @@ button {
     padding: 0rem 0.5rem;
 }
 
-
 .button-group {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -153,6 +174,7 @@ button {
     cursor: pointer;
     text-decoration: underline; /*마우스 올려놨을 때 underline*/
 }
+
 
 p.information {
     font-family: 'Sunflower', 'Ubuntu', sans-serif;
