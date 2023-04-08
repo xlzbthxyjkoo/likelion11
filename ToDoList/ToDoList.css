@@ -86,22 +86,12 @@ button {
     border-bottom: 1px solid #ddd;
 }
 
-.todo-item.checked .checkbox{
-    border: 2px solid darkgray;
-    color: green;
-}
-
 .all-button {
     margin: 1rem;
 }
 
 .checkbox {
     margin: 1rem 0.7rem;
-
-    /*
-    border-radius: 50px;
-    border: 1px solid lightgray;
-    */
 
     min-width: none;
     min-height: none;

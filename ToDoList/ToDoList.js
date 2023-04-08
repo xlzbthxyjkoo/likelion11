@@ -26,6 +26,22 @@ const appendToDoList = (text) => {
     paintToDoList();
 }
 
+const deleteToDoList = (todoId) => {
+    //입력받은 todo의 id값과 filter를 이용해 삭제하고자 하는 할 일을 제외한 새로운 할 일 목록을 가지는 배열 만듦
+    const newToDoList = getAllToDoList().filter(todo => todo.id !== todoId);
+    //setToDoList 이용해 기존의 todolist 배열을 바꿔줌
+    setToDoList(newToDoList);
+    //paintToDoList 함수를 이용해 삭제가 완료된 todolist 배열로 다시 HTML 렌더링
+    paintToDoList();
+}
+
+const completeToDoList = (todoId) => {
+    //map을 사용하여 isCompleted 값을 토글(true이면 false, false이면 true로) 처리하여 새로운 todolist 배열 저장
+    const newToDoList = getAllToDoList().map(todo => todo.id === todoId ? {...todo,  isCompleted: !todo.isCompleted} : todo );
+    setToDoList(newToDoList);
+    paintToDoList();
+}
+//user가 할 일 추가하면 html 그려주는 함수
 const paintToDoList = () => {
     ToDoListElement.innerHTML = ''; //InputElement 요소 안의 HTML 초기화
     const allToDoList = getAllToDoList(); //todolist 배열 가져오기
@@ -38,6 +54,8 @@ const paintToDoList = () => {
         const checkboxElement = document.createElement('div');
         checkboxElement.classList.add('checkbox');
         checkboxElement.innerText = '⬜';
+        //checkbox click event 발생 시 - 완료 처리
+        checkboxElement.addEventListener('click', () => completeToDoList(todo.id))
 
         const todoElement = document.createElement('div');
         todoElement.classList.add('todo');
@@ -45,6 +63,7 @@ const paintToDoList = () => {
 
         const deleteBTNElement = document.createElement('button');
         deleteBTNElement.classList.add('deleteBTN');
+        deleteBTNElement.addEventListener('click', () => deleteToDoList(todo.id)) //클릭 이벤트 발생 시, 해당 할 일 삭제
         deleteBTNElement.innerHTML = '✖';
 
         if(todo.isCompleted) {
@@ -61,7 +80,6 @@ const paintToDoList = () => {
     })
 }
 
-
 //입력에 대한 이벤트 리스너 등록
 const init = () => {
     InputElement.addEventListener('keypress', (e) => {
@@ -73,5 +91,5 @@ const init = () => {
 }
 
 
-init()
+init();
 
