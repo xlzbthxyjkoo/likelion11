@@ -1,21 +1,33 @@
-const ToDo = {
+const ToDo = {  //to-do 객체
     index: Number,
     content: String,
     check: Boolean,
 };
 
-let arr = [];
-let index = 0;
+let arr = [];  //to-do list
+let cnt = 0;  //목록의 개수
 
 var text = document.getElementsByClassName('todo-input');
-console.log(text);
 
 function Add(){
-    const ToDo1 = {
-        index: 1,
+    const ToDo = {
+        index: cnt++,
         content: text,
         check: false,
     };
+
+    arr.push(ToDo);
+}
+
+function Create() {
+
+}
+
+function Delete() {
+    
+}
+
+function View() {
 }
 
 text[0].addEventListener('keydown', (event) => {
