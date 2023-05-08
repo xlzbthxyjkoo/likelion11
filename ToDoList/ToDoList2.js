@@ -19,10 +19,6 @@ function Add(){
     arr.push(ToDo);
 }
 
-function Create() {
-
-}
-
 function Delete() {
     
 }
