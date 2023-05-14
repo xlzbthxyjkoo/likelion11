@@ -19,12 +19,14 @@ function Add(){
     arr.push(ToDo);
 }
 
+function View() {
+    arr.forEach()
+}
+
 function Delete() {
     
 }
 
-function View() {
-}
 
 text[0].addEventListener('keydown', (event) => {
     if(event.key == 'Enter') {
