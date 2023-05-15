@@ -1,9 +1,9 @@
-import Example from './test';
+import Process from './login_process';
 
 function App() {
   return (
     <div>
-      <Example />
+      <Process />
     </div>
   );
 }
