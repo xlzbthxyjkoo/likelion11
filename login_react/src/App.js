@@ -1,9 +1,9 @@
-import Process from './login_process';
+import SingUp from './signUp';
 
 function App() {
   return (
     <div>
-      <Process />
+      <SingUp />
     </div>
   );
 }
