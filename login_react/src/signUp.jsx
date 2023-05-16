@@ -1,26 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, {} from "react";
 
 export default function SingUp() {
-    const checkForm = () => {
-        if (!document.newMember.id.value) {
-            swal('회원정보 수정 실패!', "아이디를 입력하세요", 'warning');
-            return false;
-        }
-
-        if (!document.newMember.password.value) {
-            swal('회원정보 수정 실패!', "비밀번호를 입력하세요", 'warning');
-            return false;
-        }
-
-        if (document.newMember.password.value != document.newMember.password_confirm.value) {
-            swal('회원정보 수정 실패!', "비밀번호를 동일하게 입력하세요", 'warning');
-            return false;
-        }
-    }
-
     return (
-        <form name="newMember" class="form-horizontal" action="" method="post"
-            onsubmit="return checkForm()">
+        // action="" method="post"
+        <form name="newMember" class="form-horizontal"> 
             <header aria-label="Page Header">
                 <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
                     <div class="sm:flex sm:items-center sm:justify-between">
