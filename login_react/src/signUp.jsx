@@ -27,41 +27,41 @@ export default function SingUp() {
                 </div>
             </header>
 
-            <div class="container">
-                <div class="form-group  row">
+            <div class="container mx-auto max-w-screen-xl sm:py-0 lg:px-8">
+                <div class="form-group  row sm:py-2">
                     <label class="col-sm-2">id</label>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 sm:py-1">
                         <input name="id" type="text" class="form-control" placeholder="id" />
                     </div>
                 </div>
-                <div class="form-group  row">
+                <div class="form-group  row sm:py-2">
                     <label class="col-sm-2">password</label>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 sm:py-1">
                         <input name="password" type="text" class="form-control" placeholder="password" />
                     </div>
                 </div>
-                <div class="form-group  row">
+                <div class="form-group  row sm:py-2">
                     <label class="col-sm-2">check password</label>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 sm:py-1">
                         <input name="password_confirm" type="text" class="form-control" placeholder="password confirm" />
                     </div>
                 </div>
-                <div class="form-group  row">
+                <div class="form-group  row sm:py-2">
                     <label class="col-sm-2">name</label>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 sm:py-1">
                         <input name="name" type="text" class="form-control" placeholder="name" />
                     </div>
                 </div>
-                <div class="form-group  row">
+                <div class="form-group  row sm:py-2">
                     <label class="col-sm-2">gender</label>
-                    <div class="col-sm-10">
+                    <div class="col-sm-10 sm:py-1">
                         <input name="gender" type="radio" value="남" /> male
                         <input name="gender" type="radio" value="여" /> female
                     </div>
                 </div>
-                <div class="form-group row">
+                <div class="form-group row sm:py-2">
                     <label class="col-sm-2">birthday</label>
-                    <div class="col-sm-4  ">
+                    <div class="col-sm-4 sm:py-1">
                         <input type="text" name="birthyy" maxlength="4" placeholder="ex)2001" size="6" />
                         <select name="birthmm">
                             <option value="">month</option>
@@ -80,9 +80,9 @@ export default function SingUp() {
                         </select> <input type="text" name="birthdd" maxlength="2" placeholder="day" size="4" />
                     </div>
                 </div>
-                <div class="form-group  row ">
+                <div class="form-group  row sm:py-2">
                     <label class="col-sm-2">Email</label>
-                    <div class="col-sm-10">
+                    <div class="col-sm-10 sm:py-1">
                         <input type="text" name="mail1" maxlength="50" />@
                         <select name="mail2">
                             <option>naver.com</option>
@@ -92,9 +92,9 @@ export default function SingUp() {
                         </select>
                     </div>
                 </div>
-                <div class="form-group  row">
+                <div class="form-group  row sm:py-2">
                     <label class="col-sm-2">phone number</label>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 sm:py-1">
                         <input name="phone" type="text" class="form-control" placeholder="phone number" />
                     </div>
                 </div>
