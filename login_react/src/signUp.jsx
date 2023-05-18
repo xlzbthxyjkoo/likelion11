@@ -3,7 +3,8 @@ import React, {} from "react";
 export default function SingUp() {
     return (
         // action="" method="post"
-        <form name="newMember" class="form-horizontal"> 
+        // <form name="newMember" class="form-horizontal"> 
+        <div>
             <header aria-label="Page Header">
                 <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
                     <div class="sm:flex sm:items-center sm:justify-between">
@@ -54,7 +55,7 @@ export default function SingUp() {
                 </div>
                 <div class="form-group  row sm:py-2">
                     <label class="col-sm-2">gender</label>
-                    <div class="col-sm-10 sm:py-1">
+                    <div class="col-sm-10  sm:py-1">
                         <input name="gender" type="radio" value="남" /> male
                         <input name="gender" type="radio" value="여" /> female
                     </div>
@@ -99,6 +100,7 @@ export default function SingUp() {
                     </div>
                 </div>
             </div>
-        </form>
+        </div>
+        // </form> 
     );
 }
