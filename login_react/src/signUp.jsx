@@ -1,6 +1,31 @@
-import React, {} from "react";
+import React, {useEffect, useState } from "react";
 
 export default function SingUp() {
+
+    const [email, setEmail] = useState("");
+    const [domain, setDomain] = useState("");
+    const [password, setPassword] = useState("");
+
+    useEffect(() => {
+        //if(notAllow == false) alert("회원가입을 축하합니다!");
+    });
+
+    const handleEmail = (e) => {
+        setEmail(e.target.value);
+    }
+
+    const onEmail = (e) => {
+        setEmail(email + e.target.value);
+    }
+    
+    const handlePassword = (e) => {
+        setPassword(e.target.value);
+    }
+    
+    const onLogin = () => {
+        localStorage.setItem(email, password);
+    }
+
     return (
         // action="" method="post"
         // <form name="newMember" class="form-horizontal"> 
@@ -21,7 +46,7 @@ export default function SingUp() {
                         <div class="mt-4 flex flex-col gap-4 sm:mt-0 sm:flex-row sm:items-center">
                             <input type="submit"
                                 class="block rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring"
-                                value="submit ">
+                                value="submit " onClick={onLogin}>
                             </input>
                         </div>
                     </div>
@@ -32,13 +57,13 @@ export default function SingUp() {
                 <div class="form-group  row sm:py-2">
                     <label class="col-sm-2">id</label>
                     <div class="col-sm-3 sm:py-1">
-                        <input name="id" type="text" class="form-control" placeholder="id" />
+                        <input name="id" type="text" class="form-control" placeholder="id"  />
                     </div>
                 </div>
                 <div class="form-group  row sm:py-2">
                     <label class="col-sm-2">password</label>
                     <div class="col-sm-3 sm:py-1">
-                        <input name="password" type="text" class="form-control" placeholder="password" />
+                        <input name="password" type="text" class="form-control" placeholder="password" value={password} onChange={handlePassword}/>
                     </div>
                 </div>
                 <div class="form-group  row sm:py-2">
@@ -84,8 +109,8 @@ export default function SingUp() {
                 <div class="form-group  row sm:py-2">
                     <label class="col-sm-2">Email</label>
                     <div class="col-sm-10 sm:py-1">
-                        <input type="text" name="mail1" maxlength="50" />@
-                        <select name="mail2">
+                        <input type="text" name="mail1" maxlength="50" value={email} onChange={handleEmail}/>@
+                        <select name="mail2" onClick={setDomain = (e) => e.target.value}>
                             <option>naver.com</option>
                             <option>daum.net</option>
                             <option>gmail.com</option>
